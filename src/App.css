@@ -1,0 +1,45 @@
+.nav-links{
+    font-size:x-large;
+    font-weight: 700;
+    
+  color: #0b1f18a3 !important;
+ }
+
+.nav-links:hover {
+background-color:white; /*will change background-color of element on hover */
+font-weight: 600;
+font-size:x-large;
+}
+.link-line{
+  text-decoration: none !important;
+}
+
+.addTask{
+  display: flex;
+  justify-content: center;
+  margin-right: 109px;
+}
+  
+  @media (max-width: 600px) {
+    .product-title h2 {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-item {
+      display: block;
+    }
+    .product-image {
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    .product-title button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .quantity {
+      justify-content: center;
+    }
+  }
+
