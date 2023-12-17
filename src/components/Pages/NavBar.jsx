@@ -48,7 +48,7 @@ function NavBar() {
                   <button className='btn btn-danger' onClick={() => {
                         setName('')
                         sessionStorage.clear();
-                        navigate('/signup')
+                        navigate('/signin')
                         window.location.reload();
                       }}>
                         Logout

@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import instance from "../../services/instance";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import NavBar from '../Pages/NavBar'
-import Footer from '../Pages/Footer'
+import Footer from '../Pages/Footer';
 
 function SignIn() {
   const[email,setEmail]=useState('');
@@ -27,19 +26,11 @@ function SignIn() {
           sessionStorage.setItem("token", response.data.token)
           if (response.status === 200) {
             setMsg("")
-             const response = await instance.protectedInstance.get('/users/getId');
-             const res=response.data;
-             console.log(response.data.user_name);
-             const params_id=res.user_ID;
-             if(params_id == "6558eb30e521749e70219675")
-             {
-               navigate(`/viewProduct`)
-             }
-             else{
-              navigate(`/`)
-             }
-            
-             window.location.reload();
+            const response = await instance.protectedInstance.get('/tasks/getId');
+            const res = response.data;
+            console.log(res)
+            const params_id = res.user_ID;
+            navigate(`/home/${params_id}`)
           }   
       }
       catch(error)
@@ -67,7 +58,6 @@ function SignIn() {
 
     return (
       <>
-    <NavBar />
       <section className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="p-md-5" style={formStyles} >
@@ -120,7 +110,7 @@ function SignIn() {
         </div>
         </div>
         </section>
-        <Footer/>
+        <Footer />
       </>
     )
   }

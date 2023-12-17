@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import instance from "../../services/instance";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import NavBar from '../Pages/NavBar'
-import Footer from '../Pages/Footer'
+import Footer from '../Pages/Footer';
 
 function SignUp() {
   
@@ -67,7 +66,6 @@ const signup =async({name,email,password}) =>{
 
   return (
     <>
-    <NavBar />
      <section className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">      
       <div className="p-md-5" style={formStyles}>

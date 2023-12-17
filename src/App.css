@@ -19,7 +19,11 @@ font-size:x-large;
   justify-content: center;
   margin-right: 109px;
 }
+.btncolorlogin{
+  background-color:cornflowerblue;
+  color: white;
   
+}
   @media (max-width: 600px) {
     .product-title h2 {
       font-size: 16px;
